@@ -1,0 +1,18 @@
+.card-div {
+  justify-content: space-evenly;
+  display: flex;
+}
+
+.card-div img {
+  width: 200px;
+  height: 200px;
+  border-radius: 100px;
+}
+
+.user-info {
+  margin-left: 1.2rem;
+  line-height: 0;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}

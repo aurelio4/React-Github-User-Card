@@ -1,0 +1,16 @@
+.followers-list {
+  display: flex;
+  flex-direction: row;
+  margin-top: 2%;
+  justify-content: center;
+}
+
+.followers-list img {
+  width: 100px;
+  height: 100px;
+  border-radius: 100px;
+}
+
+.followers-list h1 {
+  margin-left: 20px;
+}
