@@ -8,13 +8,8 @@ export default class App extends React.Component {
     super(props)
     this.state = {
       username: '',
-      userData: [],
-      userFollowers: []
+      userData: []
     }
-  }
-
-  setFollowers = (id) => {
-    this.setState({ userFollowers: [id]})
   }
   
   getUsername = (e) => {
@@ -27,6 +22,7 @@ export default class App extends React.Component {
     axios.get(`https://api.github.com/users/${this.state.username}`)
       .then(async res => {
         const data = await res.data
+        console.log(data)
         this.setState({
           userData: data
         })
@@ -38,7 +34,7 @@ export default class App extends React.Component {
     return (
       <>
         <CardForm fetchUser={this.fetchUser} username={this.state.username} getUsername={this.getUsername} />
-        <Card username={this.state.username} user={this.state.userData} setFollowers={this.setFollowers} followers={this.state.userFollowers} />
+        <Card username={this.state.username} user={this.state.userData} isLoading={this.setLoading} />
       </>
     )
   }

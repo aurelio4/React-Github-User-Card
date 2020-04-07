@@ -18,7 +18,7 @@ export default class Card extends React.Component {
         </div>
         {this.props.user.length === 0
         ? ''
-        : <Followers setFollowers={this.props.setFollowers} followers={this.props.followers} username={this.props.username} />
+        : <Followers username={this.props.username} />
         }
         
       </>

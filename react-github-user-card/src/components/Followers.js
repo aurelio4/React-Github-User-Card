@@ -19,7 +19,9 @@ export default class Followers extends React.Component {
   }
 
   render() {
-    return (
+    return this.props.isLoading
+    ? ''
+    : (
       <>
         {this.state.userFollowers.map(follower => {
           return <div className="followers-list">
